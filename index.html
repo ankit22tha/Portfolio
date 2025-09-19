@@ -6,7 +6,7 @@
   <title>My Portfolio</title>
   <link rel="icon" type="image/png" href="ankit.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
@@ -14,14 +14,33 @@
           sans: ['Poppins', 'sans-serif'],
         },
       },
-    }
+    };
   </script>
+  <style>
+    /* Fade-in up animation */
+    .animate-fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+    .is-visible {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .animate-fade-in {
+      opacity: 0;
+      transition: opacity 1.2s;
+    }
+    .is-visibleimg {
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
   <!-- Navbar -->
   <nav class="fixed w-full z-20 bg-white/80 backdrop-blur border-b border-gray-200">
     <div class="container mx-auto flex justify-between items-center px-6 py-3">
-      <div class="text-xl font-bold tracking-tight text-indigo-600">MyPortfolio</div>
+      <div class="text-xl font-bold tracking-tight text-indigo-600">AnkitKumar</div>
       <ul class="flex gap-6 text-base font-semibold">
         <li><a href="#hero" class="transition hover:text-indigo-500">Home</a></li>
         <li><a href="#about" class="transition hover:text-indigo-500">About</a></li>
@@ -33,16 +52,29 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="pt-28 pb-20 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-200">
+  <section
+    id="hero"
+    class="pt-28 pb-20 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-200"
+  >
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       <div class="md:w-2/3 animate-fade-in-up">
         <h3 class="text-lg mb-2">Hey, I'm</h3>
         <h1 class="font-bold text-4xl md:text-6xl mb-4 text-indigo-900">Ankit Kumar</h1>
-        <p class="text-lg md:text-xl mb-8 text-gray-700">IT Support Engineer & Aspiring Developer</p>
-        <a href="#contact" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg transition hover:bg-indigo-700 hover:scale-105 hover:shadow-2xl">Contact Me</a>
+        <p class="text-lg md:text-xl mb-8 text-gray-700">
+          IT Support Engineer & Aspiring DevOps Engineer & Software Engineer!
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg transition hover:bg-indigo-700 hover:scale-105 hover:shadow-2xl"
+          >Contact Me</a
+        >
       </div>
       <div class="md:w-1/3 hidden md:block">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="w-48 h-48 rounded-full shadow-lg border-4 border-white object-cover mx-auto animate-fade-in" />
+        <img
+          src="ankitphoto.jpg"
+          alt="Profile"
+          class="w-50 h-48 rounded-full shadow-lg border-4 border-white object-cover mx-auto animate-fade-in"
+        />
       </div>
     </div>
   </section>
@@ -52,7 +84,9 @@
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
       <p class="mx-auto max-w-3xl text-lg text-center text-gray-600 animate-fade-in-up">
-        BCA graduate with hands-on experience in IT support, server administration, Linux, and web development. Passionate about learning new technologies and building modern, useful solutions.
+        BCA graduate with hands-on experience in IT support, server administration,
+        Linux, and web development. Passionate about learning new technologies
+        and building modern, useful solutions.
       </p>
     </div>
   </section>
@@ -61,21 +95,43 @@
   <section id="skills" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-12 mb-2">
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
+      >
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+            class="w-12 mb-2"
+          />
           <p class="font-semibold text-gray-800">Linux</p>
         </div>
-        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 mb-2">
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            class="w-12 mb-2"
+          />
           <p class="font-semibold text-gray-800">JavaScript</p>
         </div>
-        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 mb-2">
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            class="w-12 mb-2"
+          />
           <p class="font-semibold text-gray-800">SQL/MySQL</p>
         </div>
-        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 mb-2">
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition animate-fade-in-up"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            class="w-12 mb-2"
+          />
           <p class="font-semibold text-gray-800">HTML5</p>
         </div>
       </div>
@@ -87,16 +143,29 @@
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
       <div class="grid gap-8 md:grid-cols-2">
-        <!-- Example Project Card -->
-        <div class="rounded-2xl bg-gray-50 shadow-lg p-6 hover:shadow-2xl transition animate-fade-in-up">
+        <div
+          class="rounded-2xl bg-gray-50 shadow-lg p-6 hover:shadow-2xl transition animate-fade-in-up"
+        >
           <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
-          <p class="text-gray-600 mb-3">Modern, mobile-friendly portfolio built using HTML, Tailwind CSS, and JavaScript.</p>
-          <a href="#" class="inline-block text-indigo-600 underline hover:text-indigo-800">View Source</a>
+          <p class="text-gray-600 mb-3">
+            Modern, mobile-friendly portfolio built using HTML, Tailwind CSS,
+            and JavaScript.
+          </p>
+          <a href="#" class="inline-block text-indigo-600 underline hover:text-indigo-800">
+            View Source
+          </a>
         </div>
-        <div class="rounded-2xl bg-gray-50 shadow-lg p-6 hover:shadow-2xl transition animate-fade-in-up">
+        <div
+          class="rounded-2xl bg-gray-50 shadow-lg p-6 hover:shadow-2xl transition animate-fade-in-up"
+        >
           <h3 class="text-xl font-semibold mb-2">IT Support System</h3>
-          <p class="text-gray-600 mb-3">Ticketing and inventory management app for IT teams using modern web technologies.</p>
-          <a href="#" class="inline-block text-indigo-600 underline hover:text-indigo-800">View Source</a>
+          <p class="text-gray-600 mb-3">
+            Ticketing and inventory management app for IT teams using modern web
+            technologies.
+          </p>
+          <a href="#" class="inline-block text-indigo-600 underline hover:text-indigo-800">
+            View Source
+          </a>
         </div>
       </div>
     </div>
@@ -106,11 +175,33 @@
   <section id="contact" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6 max-w-lg">
       <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
-      <form class="bg-white rounded-xl shadow-xl p-8 flex flex-col gap-4 animate-fade-in-up">
-        <input type="text" placeholder="Name" class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition" required />
-        <input type="email" placeholder="Email" class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition" required />
-        <textarea placeholder="Message" rows="4" class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition" required></textarea>
-        <button type="submit" class="bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition shadow-md hover:scale-105">Send</button>
+      <form
+        class="bg-white rounded-xl shadow-xl p-8 flex flex-col gap-4"
+      >
+        <input
+          type="text"
+          placeholder="Name"
+          class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition"
+          required
+        />
+        <textarea
+          placeholder="Message"
+          rows="4"
+          class="rounded px-4 py-2 border focus:ring-2 focus:ring-indigo-400 transition"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition shadow-md hover:scale-105"
+        >
+          Send
+        </button>
       </form>
     </div>
   </section>
@@ -122,13 +213,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
-  <style>
-    /* Simple fade-in up animation for scroll reveal */
-   /* .animate-fade-in-up { opacity: 0; transform: translateY(40px); }*/
-    .is-visible { opacity: 1 !important; transform: none !important; }
-   /* .animate-fade-in { opacity: 0; transition: opacity 1.2s; }*/
-    .is-visibleimg { opacity: 1 !important; }
-  </style>
+  <script src="mian.js"></script>
 </body>
 </html>
