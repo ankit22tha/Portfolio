@@ -114,18 +114,32 @@ function initContactForm() {
       const phone = formData.get('phone');
       const message = formData.get('message');
       
-      // Simple validation
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-      
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-      }
+      // Contact form handler
+      function initContactForm() {
+      const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+
+      // AJAX fetch to backend
+      fetch(this.action, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.text())
+      .then(text => alert(text))  // Server response alert karega
+      .catch(() => alert('An error occurred. Please try again.'));
+
+      console.log('Contact form submitted with AJAX');
+    });
+  } else {
+    console.log('Contact form not found');
+  }
+}
+
       
       // Show success message
       alert(`Thank you, ${name}! Your message has been sent. I will get back to you soon.`);
